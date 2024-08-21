@@ -1,0 +1,136 @@
+{
+    "fastq.gz single": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "test1",
+                        "single_end": true
+                    },
+                    "test1.contigs.fa.gz:md5,0663ebb8cf2764698820e0c16793e4f6"
+                ]
+            ],
+            [
+                "versions.yml:md5,e3c0731297c9abe2f495ab6d541ac0e6"
+            ],
+            [
+                "21"
+            ],
+            [
+                "141"
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-24T08:08:53.488611621"
+    },
+    "fastq.gz paired": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "test1",
+                        "single_end": false
+                    },
+                    "test1.contigs.fa.gz:md5,5789b08fc853f418bfcfe770c1ee9fc0"
+                ]
+            ],
+            [
+                "versions.yml:md5,e3c0731297c9abe2f495ab6d541ac0e6"
+            ],
+            [
+                "21"
+            ],
+            [
+                "141"
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-24T08:09:57.506132965"
+    },
+    "fastq.gz paired coassembly": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "test1",
+                        "single_end": false
+                    },
+                    "test1.contigs.fa.gz:md5,7047e707fd3ba799813e4dc3cfd9f859"
+                ]
+            ],
+            [
+                "versions.yml:md5,e3c0731297c9abe2f495ab6d541ac0e6"
+            ],
+            [
+                "21"
+            ],
+            [
+                "141"
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-24T08:12:15.319314298"
+    },
+    "fastq.gz paired - stub": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "test1"
+                    },
+                    "test1.contigs.fa.gz:md5,68b329da9893e34099c7d8ad5cb9c940"
+                ]
+            ],
+            [
+                "versions.yml:md5,e3c0731297c9abe2f495ab6d541ac0e6"
+            ],
+            [
+                "21"
+            ],
+            [
+                "141"
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-24T08:13:41.926765658"
+    },
+    "fastq.gz single coassembly": {
+        "content": [
+            [
+                [
+                    {
+                        "id": "test1",
+                        "single_end": true
+                    },
+                    "test1.contigs.fa.gz:md5,ba7cd8b6a67f15d108515b8c34de1787"
+                ]
+            ],
+            [
+                "versions.yml:md5,e3c0731297c9abe2f495ab6d541ac0e6"
+            ],
+            [
+                "21"
+            ],
+            [
+                "141"
+            ]
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-24T08:13:23.325507172"
+    }
+}

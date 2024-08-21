@@ -1,0 +1,68 @@
+{
+    "fasta.gz - stub": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.tsv:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,e5810dac4e10040b1a74b8672a829734"
+                ],
+                "stats": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.tsv:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,e5810dac4e10040b1a74b8672a829734"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T20:48:01.979967253"
+    },
+    "fasta.gz": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.tsv:md5,af2521fa0c7e1a0683e60df6292429de"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,e5810dac4e10040b1a74b8672a829734"
+                ],
+                "stats": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.tsv:md5,af2521fa0c7e1a0683e60df6292429de"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,e5810dac4e10040b1a74b8672a829734"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T20:47:45.376897913"
+    }
+}

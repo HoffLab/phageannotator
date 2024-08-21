@@ -1,0 +1,101 @@
+{
+    "fastq.gz single": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,04c6731f1848980468ff11f9286e5f1f"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,04c1eaabeaaa45359f8cebd60f7ade20"
+                ],
+                "enrichment": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,04c6731f1848980468ff11f9286e5f1f"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,04c1eaabeaaa45359f8cebd60f7ade20"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T09:29:38.361341306"
+    },
+    "fastq.gz paired": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,04c1eaabeaaa45359f8cebd60f7ade20"
+                ],
+                "enrichment": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,04c1eaabeaaa45359f8cebd60f7ade20"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T09:32:29.89726697"
+    },
+    "fastq.gz paired - stub": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,04c1eaabeaaa45359f8cebd60f7ade20"
+                ],
+                "enrichment": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,d41d8cd98f00b204e9800998ecf8427e"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,04c1eaabeaaa45359f8cebd60f7ade20"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T09:42:35.059686334"
+    }
+}

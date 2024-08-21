@@ -74,30 +74,38 @@ workflow PIPELINE_INITIALISATION {
     )
 
     //
-    // Create channel from input file provided through params.input
+    // Create channels from input file provided through params.input and params.assembly_input
     //
-    Channel
+    // validate FASTQ input
+    ch_samplesheet = Channel
         .fromSamplesheet("input")
         .map {
-            meta, fastq_1, fastq_2 ->
-                if (!fastq_2) {
-                    return [ meta.id, meta + [ single_end:true ], [ fastq_1 ] ]
-                } else {
-                    return [ meta.id, meta + [ single_end:false ], [ fastq_1, fastq_2 ] ]
-                }
+            validateInputSamplesheet(it[0], it[1], it[2], it[3])
         }
-        .groupTuple()
-        .map {
-            validateInputSamplesheet(it)
+
+    // prepare FASTQs channel and separate short and long reads and prepare
+    ch_input = ch_samplesheet
+        .map { meta, fastq_1, fastq_2, fasta ->
+            meta.run          = meta.run == null ? "0" : meta.run
+            meta.single_end   = fastq_2 ? false : true
+
+            if ( meta.single_end ) {
+                return [ meta, [ fastq_1 ], fasta ]
+            } else {
+                return [ meta, [ fastq_1, fastq_2 ], fasta ]
+            }
         }
-        .map {
-            meta, fastqs ->
-                return [ meta, fastqs.flatten() ]
+        .multiMap { meta, fastqs, fasta ->
+            fastq: [ meta, fastqs ]
+            fasta: [ meta, fasta ]
         }
-        .set { ch_samplesheet }
+
+    // Custom validation for pipeline parameters
+    validateInputParameters()
 
     emit:
-    samplesheet = ch_samplesheet
+    fastqs      = ch_input.fastq
+    fastas      = ch_input.fasta
     versions    = ch_versions
 }
 
@@ -143,20 +151,46 @@ workflow PIPELINE_COMPLETION {
     FUNCTIONS
 ========================================================================================
 */
-
+//
+// Validate input pipeline parameters
+//
+def validateInputParameters() {
+    if (params.run_bowtie2_host_removal && !params.bowtie2_igenomes_host && !params.bowtie2_custom_host_fasta) {
+        error("ERROR: [nf-core/taxprofiler] --run_bowtie2_host_removal requested but no --bowtie2_igenomes_host or --bowtie2_custom_host_fasta supplied. Check input.")
+    }
+}
 //
 // Validate channels from input samplesheet
 //
-def validateInputSamplesheet(input) {
-    def (metas, fastqs) = input[1..2]
+def validateInputSamplesheet(meta, fastq_1, fastq_2, fasta ) {
 
-    // Check that multiple runs of the same sample are of the same datatype i.e. single-end / paired-end
-    def endedness_ok = metas.collect{ it.single_end }.unique().size == 1
-    if (!endedness_ok) {
-        error("Please check input samplesheet -> Multiple runs of a sample must be of the same datatype i.e. single-end or paired-end: ${metas[0].id}")
+    return  [ meta, fastq_1, fastq_2, fasta ]
+}
+
+//
+// Get attribute from genome config file e.g. fasta
+//
+def getGenomeAttribute(attribute) {
+    if (params.genomes && params.genome && params.genomes.containsKey(params.genome)) {
+        if (params.genomes[ params.genome ].containsKey(attribute)) {
+            return params.genomes[ params.genome ][ attribute ]
+        }
     }
+    return null
+}
 
-    return [ metas[0], fastqs ]
+//
+// Exit pipeline if incorrect --genome key provided
+//
+def genomeExistsError() {
+    if (params.genomes && params.genome && !params.genomes.containsKey(params.genome)) {
+        def error_string = "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+            "  Genome '${params.genome}' not found in any config files provided to the pipeline.\n" +
+            "  Currently, the available genome keys are:\n" +
+            "  ${params.genomes.keySet().join(", ")}\n" +
+            "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        error(error_string)
+    }
 }
 
 //

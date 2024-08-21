@@ -1,0 +1,98 @@
+{
+    "fastq.gz + db": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ],
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a",
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a"
+                ],
+                "enrichment_tsv": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ],
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a",
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.4"
+        },
+        "timestamp": "2024-08-21T07:10:27.535887599"
+    },
+    "fastq.gz + no_db": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ],
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,4ccc4c0f15f5c15071a00dd99999869d",
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a",
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a"
+                ],
+                "enrichment_tsv": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ],
+                    [
+                        {
+                            "id": "test"
+                        },
+                        "test.viromeqc.tsv:md5,6acbffc97f75774cf9fcc953b98913ed"
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,4ccc4c0f15f5c15071a00dd99999869d",
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a",
+                    "versions.yml:md5,68b364ec64f345aa4158d184a84a896a"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.9.0",
+            "nextflow": "24.04.4"
+        },
+        "timestamp": "2024-08-20T12:33:34.47034702"
+    }
+}

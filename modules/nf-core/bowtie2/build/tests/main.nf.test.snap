@@ -1,0 +1,96 @@
+{
+    "fasta - stub": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        [
+                            "genome.1.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.2.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.3.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.4.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.rev.1.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.rev.2.bt2:md5,d41d8cd98f00b204e9800998ecf8427e"
+                        ]
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,1df11e9b82891527271c889c880d3974"
+                ],
+                "index": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        [
+                            "genome.1.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.2.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.3.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.4.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.rev.1.bt2:md5,d41d8cd98f00b204e9800998ecf8427e",
+                            "genome.rev.2.bt2:md5,d41d8cd98f00b204e9800998ecf8427e"
+                        ]
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,1df11e9b82891527271c889c880d3974"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T08:49:58.803973062"
+    },
+    "fasta": {
+        "content": [
+            {
+                "0": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        [
+                            "genome.1.bt2:md5,cbe3d0bbea55bc57c99b4bfa25b5fbdf",
+                            "genome.2.bt2:md5,47b153cd1319abc88dda532462651fcf",
+                            "genome.3.bt2:md5,4ed93abba181d8dfab2e303e33114777",
+                            "genome.4.bt2:md5,c25be5f8b0378abf7a58c8a880b87626",
+                            "genome.rev.1.bt2:md5,52be6950579598a990570fbcf5372184",
+                            "genome.rev.2.bt2:md5,e3b4ef343dea4dd571642010a7d09597"
+                        ]
+                    ]
+                ],
+                "1": [
+                    "versions.yml:md5,1df11e9b82891527271c889c880d3974"
+                ],
+                "index": [
+                    [
+                        {
+                            "id": "test"
+                        },
+                        [
+                            "genome.1.bt2:md5,cbe3d0bbea55bc57c99b4bfa25b5fbdf",
+                            "genome.2.bt2:md5,47b153cd1319abc88dda532462651fcf",
+                            "genome.3.bt2:md5,4ed93abba181d8dfab2e303e33114777",
+                            "genome.4.bt2:md5,c25be5f8b0378abf7a58c8a880b87626",
+                            "genome.rev.1.bt2:md5,52be6950579598a990570fbcf5372184",
+                            "genome.rev.2.bt2:md5,e3b4ef343dea4dd571642010a7d09597"
+                        ]
+                    ]
+                ],
+                "versions": [
+                    "versions.yml:md5,1df11e9b82891527271c889c880d3974"
+                ]
+            }
+        ],
+        "meta": {
+            "nf-test": "0.8.4",
+            "nextflow": "24.04.1"
+        },
+        "timestamp": "2024-07-23T08:49:15.89652615"
+    }
+}
